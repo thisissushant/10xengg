@@ -4,7 +4,7 @@ import Pagination from "./Pagination";
 
 const MovieList = ({ movies }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(9);
+  const [itemsPerPage] = useState(6);
   const [expandedMovie, setExpandedMovie] = useState(null);
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -46,6 +46,9 @@ const MovieList = ({ movies }) => {
                   <p className="line-clamp-2">
                     Genres: {movie.moviegenres.join(", ")}
                   </p>
+                  <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded mt-4">
+                    Borrow Movie
+                  </button>
                 </>
               )}
             </div>
